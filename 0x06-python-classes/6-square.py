@@ -4,19 +4,17 @@
 
 class Square:
     """Define the method square."""
-    def __init__(self, size=0):
+    def __init__(self, size=0, position=(0,0)):
         """"Initialize the size of the square.
 
         Args:
             size (int): size of the square."""
-        self.__size = size
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
-        """the gutter used to retrieve the size of the squares side
-
-        Returns:
-            int: Size of the square"""
+        """the gutter used to retrieve the size of the squares side"""
         return (self.__size)
 
     @size.setter
@@ -33,10 +31,7 @@ class Square:
 
     @property
     def position(self):
-        """Getter method for the position of a square
-
-        Returns:
-            tuple: The position of the square."""
+        """Getter method for the position of a square"""
         return (self.__position)
 
     @position.setter
@@ -45,16 +40,14 @@ class Square:
 
         Args:
             value (int): The new posution pof the square. """
-        if not isinstance(value, tuple) or len(value) != 2 or \
-           not all(isinstance(num, int) and num >= 0 for num in value):
+        if (not isinstance(value, tuple) or len(value) != 2 or 
+                not all(isinstance(num, int) for num in value) or
+                not all(num >= 0 for num in value)):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
     def area(self):
-        """Calculoates the area of the square
-
-        Returns:
-            int: area of the square."""
+        """Calculoates the area of the square."""
         return (self.__size ** 2)
 
     def my_print(self):
