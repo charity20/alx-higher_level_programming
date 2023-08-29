@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-"""Defines a class square."""
+"""Defines a class Square."""
 
 
-class square:
+class Square:
     """
     Defines the square size as a private attribute.
 
