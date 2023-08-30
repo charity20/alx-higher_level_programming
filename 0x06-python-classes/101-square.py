@@ -59,3 +59,19 @@ class Square:
                 print()
             for _ in range(self.__size):
                 print(" " * self.__position[0] + "#" * self.__size)
+
+    def __str__(self):
+        """Custom string representation of the Square instance.
+
+        Returns:
+            str: A string representation of the square.
+        """
+        string_representation = ""
+        if self.__size == 0:
+            string_representation += '\n'
+        else:
+            for _ in range(self.__position[1]):
+                string_representation += '\n'
+            for _ in range(self.__size):
+                string_representation += " " * self.__position[0] + "#" * self.__size + '\n'
+        return string_representation.rstrip()
