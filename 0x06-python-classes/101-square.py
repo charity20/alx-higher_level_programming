@@ -66,12 +66,12 @@ class Square:
         Returns:
             str: A string representation of the square.
         """
-        string_representation = ""
+        sr = ""
         if self.__size == 0:
-            string_representation += '\n'
+            sr += '\n'
         else:
             for _ in range(self.__position[1]):
-                string_representation += '\n'
+                sr += '\n'
             for _ in range(self.__size):
-                string_representation += " " * self.__position[0] + "#" * self.__size + '\n'
-        return string_representation.rstrip()
+                sr += " " * self.__position[0] + "#" * self.__size + '\n'
+        return sr.rstrip()
