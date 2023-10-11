@@ -3,10 +3,11 @@
 
 
 class MyList(list):
-    """Class with method print_sorted"""
-    pass
+    """Class that inherits from list"""
 
     def print_sorted(self):
-        """Methot that sorted a list"""
+        """Prints the list in ascending order"""
 
-        print(sorted(list(self)))
+        list1 = self[:]
+        list1.sort()
+        print(list1)
