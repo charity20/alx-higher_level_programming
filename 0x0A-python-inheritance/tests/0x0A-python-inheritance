@@ -1,0 +1,12 @@
+#!/usr/bin/python3
+
+"""Inherit my_list from list"""
+
+class MyList(list):
+    """Pass everthing from list"""
+    pass
+    
+    def print_sorted(self):
+        """sorts a list in ascending order"""
+
+        print(sorted(list(self)))
